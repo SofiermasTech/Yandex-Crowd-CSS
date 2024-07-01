@@ -636,7 +636,7 @@ a:hover {
    overflow: hidden;
    width: 100%;
    min-height: 765px;
-   background-image: url("../../images/dist/intro-back.webp");
+   background-image: url("../images/dist/intro-back.webp");
    background-color: rgba(233, 222, 212, .8);
    background-position: top -116px center;
    background-repeat: no-repeat;
@@ -651,7 +651,7 @@ a:hover {
 
 @media(max-width: 560px) {
    .section-background-intro {
-      background-image: url("../../images/dist/intro-back-mobile.webp");
+      background-image: url("../images/dist/intro-back-mobile.webp");
       background-size: cover;
       background-position: bottom right -122px;
       min-height: 816px
@@ -1113,7 +1113,7 @@ a:hover {
       margin-bottom: 30px;
       width: 335px;
       overflow: hidden;
-      background: url("../../images/dist/steps-background.webp") no-repeat;
+      background: url("../images/dist/steps-background.webp") no-repeat;
       padding: 49px 20px
    }
 }
@@ -1155,7 +1155,7 @@ a:hover {
 }
 
 .section-steps__item {
-   background: url("../../images/dist/steps-background.webp") no-repeat;
+   background: url("../images/dist/steps-background.webp") no-repeat;
    background-size: cover;
    padding: 18px 6px 20px 14px;
    display: -webkit-box;
