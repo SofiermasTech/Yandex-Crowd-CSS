@@ -103,6 +103,53 @@ btnNext.forEach(btn => {
    })
 })
 
+function startAutoSlider() {
+   if (document.documentElement.clientWidth < 992) {
+      if (countPlayers === slideLengthPlayers.length) {
+         countPlayers = 0;
+         currentCountNumber = 1;
+         currentNumber.textContent = currentCountNumber;
+      }
+   } else {
+      if (countPlayers === slideLengthPlayers.length - 2) {
+         countPlayers = 0;
+         currentCountNumber = 3;
+         currentNumber.textContent = currentCountNumber;
+      }
+   }
+}
+
+let autoSlider = setInterval(function () {
+   countPlayers++;
+   currentCountNumber += 1;
+   currentNumber.textContent = currentCountNumber;
+
+   startAutoSlider();
+
+   rollSliderPlayers();
+   checkDisabled(btnPrev);
+
+}, 4000);
+
+//Отслеживание фокуса на слайдере
+sliderLinePlayers.addEventListener('mouseenter', () => {
+   clearInterval(autoSlider);
+});
+
+sliderLinePlayers.addEventListener('mouseleave', () => {
+   autoSlider = setInterval(function() {
+      countPlayers++;
+      currentCountNumber += 1;
+      currentNumber.textContent = currentCountNumber;
+
+      startAutoSlider();
+
+      rollSliderPlayers();
+      checkDisabled(btnPrev);
+
+   }, 4000);
+});
+
 
 // Второй слайдер на мобилках 'section-steps'
 
